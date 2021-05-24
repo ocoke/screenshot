@@ -20,6 +20,7 @@ jobs:
         token: ${{ github.token }} # optional, default is ${{ github.token }}
     - name: Download
       run: |
+        pip install requests
         python main.py
         curl https://purge.jsdelivr.net/gh/oCoke/screenshot@gh-pages/*.*
     - name: Deploy
