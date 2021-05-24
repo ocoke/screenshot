@@ -8,7 +8,7 @@ for line in file.readlines():
     print(domain)
     try:
         res =  req.get(url)
-        with open('{}.jpg'.format(domain), "wb") as file:
+        with open('./public/{}.jpg'.format(domain), "wb") as file:
             file.write(res.content)
     except:
         print("Error.")
